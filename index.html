@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration Demo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Login Screen -->
+    <div id="loginScreen">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="login_id">Username:</label>
+            <input type="text" id="login_id" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+            <button type="button" onclick="authenticateUser()">Login</button>
+        </form>
+    </div>
+
+    <!-- Customer List Screen -->
+    <div id="customerListScreen" style="display: none;">
+        <h2>Customer List</h2>
+        <button id="addCustomerButton">Add Customer</button>
+        <table id="customerTable" border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="customerTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Add Customer Screen -->
+    <div id="addCustomerScreen" style="display: none;">
+        <h2>Add a new customer</h2>
+        <form id="addCustomerForm">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" required>
+            <button type="submit">Add Customer</button>
+        </form>
+    </div>
+
+    <!-- Add/Edit Customer Form -->
+    <div id="customerForm" style="display: none;">
+        <h2>Add/Edit Customer</h2>
+        <form>
+            <label for="edit_first_name">First Name:</label>
+            <input type="text" id="edit_first_name" required>
+            <br>
+            <label for="edit_last_name">Last Name:</label>
+            <input type="text" id="edit_last_name" required>
+            <br>
+            <label for="edit_email">Email:</label>
+            <input type="email" id="edit_email" required>
+            <br>
+            <button type="button" onclick="editCustomer()">Save Changes</button>
+        </form>
+    </div>
+
+    <!-- Script for API Integration -->
+    <script src="script.js"></script>
+</body>
+
+</html>

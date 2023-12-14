@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#customerTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#customerTable th,
+#customerTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#customerTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#customerTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customerTable tr:hover {
+    background-color: #ddd;
+}
+
+#customerForm {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+}
